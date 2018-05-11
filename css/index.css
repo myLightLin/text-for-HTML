@@ -1,0 +1,615 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "微软雅黑", "宋体";
+}
+html{
+    font-size: 10px;
+}
+body{
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+.header{
+    width: 100%;
+    height: 8.5rem;
+    /*margin: 0 20px;*/
+    background: #fff;
+    /*overflow: hidden;*/
+    position: relative;
+}
+.header .hide{
+    width: 1920px;
+    height: 8.5rem;
+    overflow: hidden;
+    /*background-color: red;*/
+}
+nav ul{
+    position: absolute;
+    width: 120rem;
+    left: 8rem;
+    top: 50%;
+    margin-top: -3.2rem;
+}
+nav ul li{
+    position: relative;
+    /*line-height: 1;*/
+    display: inline-block;
+    padding: 2.5rem;
+    font-size: 1.4rem;
+    transition: 0.2s all linear;
+}
+nav ul .active{
+    color: #008ed6;
+}
+nav ul li::before {
+    content: "";
+    position: absolute;
+    top: 0.4rem;
+    left: 100%;
+    width: 0;
+    height: 100%;
+    border-bottom: 2px solid #008ed6;
+    transition: 0.2s all linear;
+}
+nav ul li:hover::before {
+    width: 100%;
+    top: 0.4rem;
+    left: 0;
+    transition-delay: 0.1s;
+    border-bottom-color: #008ed6;
+}
+nav ul li:hover ~ li::before {
+    left: 0;
+}
+nav ul li a:hover{
+    color: #008ed6;
+}
+nav ul li a{
+    color: #333;
+}
+.logo a{
+    display: block;
+    width: 6.9rem;
+    height: 6.2rem;
+    position: absolute;
+    top: 1.2rem;
+    left: 72.5rem;
+    /*left: 50%;*/
+    /*top: 50%;*/
+    /*margin-left: -3.45rem;*/
+    /*margin-top: -3.1rem;*/
+}
+.logo img{
+    width: 6.9rem;
+    height: 6.2rem;
+    display: inline-block;
+}
+.en{
+    position: relative;
+    left: 136rem;
+    top: 3.4rem;
+    font-size: 1.4rem;
+    overflow: hidden;
+}
+.en a{
+    color: #333;
+}
+.en a:hover{
+    color: #008ed6;
+}
+#banner{
+    width: 100%;
+    height: 50rem;
+    /*background: url("../img/logo/banner.png") no-repeat center center;*/
+    /*background-size: cover;*/
+    position: relative;
+    overflow: hidden;
+}
+#list{
+    width: 6080px;
+    height: 50rem;
+    position: absolute;
+    z-index: 1;
+}
+#list li{
+    width: 1520px;
+    float: left;
+    height: 50rem;
+}
+#buttons{
+    position: absolute;
+    width: 10%;
+    height: 0.8rem;
+    z-index: 2;
+    bottom: 1rem;
+    left: 48%;
+}
+#buttons span{
+    cursor: pointer;
+    float: left;
+    border: 1px solid #fff;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background: #333;
+    margin-right: 1rem;
+}
+#buttons .on{
+    background: #fff;
+}
+.arrow{
+    width: 4rem;
+    height: 4rem;
+    line-height: 3.8rem;
+    position: absolute;
+    top: 21.5rem;
+    cursor: pointer;
+    display: none;
+    text-align: center;
+    font-size: 3.6rem;
+    z-index: 2;
+    text-decoration: none;
+    color: #fff;
+}
+#banner:hover .arrow{
+    display: block;
+}
+#prev{
+    left: 1rem;
+}
+#next{
+    right: 1rem;
+}
+#list li:nth-of-type(1){
+    background: url("../img/logo/banner-2.png") no-repeat center center;
+    background-size: cover;
+}
+#list li:nth-of-type(2){
+    background: url("../img/logo/banner.png") no-repeat center center;
+    background-size: cover;
+}
+#list li:nth-of-type(3){
+    background: url("../img/logo/banner-2.png") no-repeat center center;
+    background-size: cover;
+}
+#list li:nth-of-type(4){
+    background: url("../img/logo/banner.png") no-repeat center center;
+    background-size: cover;
+}
+.content{
+    width: 100%;
+    height: auto;
+    margin: 0 30rem;
+    overflow: hidden;
+}
+.aboutus .word{
+    padding-top: 5.5rem;
+}
+.aboutus .word img{
+    position: relative;
+    left: 6rem;
+    bottom: 2rem;
+}
+.aboutus .text p{
+    font-size: 1.8rem;
+    padding-top: 4rem;
+    padding-left: 0.4rem;
+    color: #000;
+    float: left;
+    font-family: "微软雅黑", "宋体";
+}
+.aboutus .word .span1{
+    font-size: 2rem;
+}
+.aboutus .word .span2{
+    font-size: 2.4rem;
+    letter-spacing: 0.3rem;
+}
+.aboutus .text img{
+    width: 35rem;
+    height: 23.3rem;
+    float: left;
+    position: absolute;
+    left: 88.6rem;
+    z-index: 3;
+}
+.aboutus .text .clear{
+    clear: both;
+}
+.aboutus > img{
+    position: absolute;
+    left: 78.7rem;
+    top: 89.6rem;
+    z-index: 3;
+}
+.aboutus a{
+    display: block;
+    position: absolute;
+    left: 78.7rem;
+    top: 89.6rem;
+    width: 10rem;
+    height: 3.6rem;
+    color: #6fa8dc;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 3.6rem;
+    z-index: 3;
+}
+.aboutus a:hover{
+    background: #008ed6;
+    color: #fff;
+    font-weight: normal;
+}
+.case{
+    width: 100%;
+    height: 100.7rem;
+    background: #f2f2f2;
+    position: relative;
+    top: 3.7rem;
+}
+.case .case_word{
+    padding-top: 5.8rem;
+}
+.case .case_word .case_span1{
+    font-size: 2rem;
+}
+.case .case_word .case_span2{
+    font-size: 2.4rem;
+    letter-spacing: 0.3rem;
+}
+.case .case_word img{
+    position: absolute;
+    top: 14rem;
+    left: 30rem;
+    width: 5rem;
+}
+.case .listA{
+    padding-top: 8rem;
+    position: absolute;
+    z-index: 5;
+    left: 28rem;
+    width: 120rem;
+    overflow: hidden;
+}
+.case ul li .dev:hover{
+    box-shadow: 0rem 1.9rem 1.9rem rgba(0,0,0,.6);
+}
+.case ul li{
+    display: inline-block;
+}
+.case ul li > img{
+    width: 28.2rem;
+    height: 20.7rem;
+    padding: 0 2rem;
+}
+.case ul li .dev{
+    position: relative;
+    width: 28.2rem;
+    height: 16.3rem;
+    background: #fff;
+    margin: -0.1rem 2rem;
+}
+.case ul li .dev h3{
+    font-size: 2rem;
+    padding-top: 1.5rem;
+}
+.case ul li .dev img{
+    position: absolute;
+    left: 10rem;
+    top: 3rem;
+}
+.case ul li .dev span{
+    display: block;
+    font-size: 1.4rem;
+    padding-top: 2.5rem;
+    padding-left: 0.5rem;
+}
+.case ul li .dev a{
+    display: block;
+    padding-top: 1.6rem;
+    padding-left: 0.5rem;
+    color: #333;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.case ul li .dev a:hover{
+    color: #666;
+}
+.case .listB{
+    padding-top: 47rem;
+    position: absolute;
+    z-index: 2;
+    left: 28rem;
+    width: 120rem;
+    overflow: hidden;
+}
+.dev .dev_line{
+    display: block;
+    width: 12rem;
+    height: 0.1rem;
+    margin-left: 3.7rem;
+}
+.newscenter .news_word{
+    padding-top: 6.5rem;
+}
+.newscenter .news_word img{
+    width: 6rem;
+    position: absolute;
+    top: 201rem;
+    left: 30rem;
+}
+.newscenter .news_word .news_span1{
+    font-size: 2rem;
+}
+.newscenter .news_word .news_span2{
+    font-size: 2.4rem;
+    letter-spacing: 0.3rem;
+}
+.newscenter .img_list > img{
+    width: 29rem;
+    height: 18.1rem;
+    vertical-align: top;
+}
+.newscenter .img_list .img1,.img2,.img3,.new_detailA,.new_detailB {
+    display: inline-block;
+}
+.newscenter .img_list .new_detailA,.new_detailB{
+    width: 29rem;
+    height: 18.1rem;
+    background: #e5e5e5;
+    padding: 0;
+}
+.img_list{
+    text-align: right;
+    position: absolute;
+    left: 1rem;
+    top: 206rem;
+    z-index: 5;
+    width: 120rem;
+    overflow: hidden;
+}
+.newscenter .new_detailA,.new_detailB{
+    position: relative;
+    text-align: left;
+}
+.newscenter .new_detailA span:nth-child(1){
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+    font-size: 1.6rem;
+    color: #333;
+}
+.newscenter .new_detailA span:nth-of-type(2){
+    position: absolute;
+    left: 1.2rem;
+    top: 5.4rem;
+    font-size: 1.6rem;
+    color: #333;
+}
+.newscenter .new_detailA h3{
+    position: absolute;
+    right: 1rem;
+    top: 4.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+.newscenter .new_detailA h3:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.newscenter .new_detailA img{
+    position: absolute;
+    left: 0.9rem;
+    top: 8.6rem;
+}
+.newscenter .new_detailA span:nth-of-type(3){
+    position: absolute;
+    top: 8rem;
+    right: 2rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+.newscenter .new_detailA a{
+    position: absolute;
+    left: 10.3rem;
+    bottom: 3rem;
+    color: #333;
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+.newscenter .new_detailA a:hover{
+    color: #666;
+}
+
+.newscenter .new_detailB{
+    background: #fbfbfb;
+}
+.newscenter .new_detailB span:nth-child(1){
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+    font-size: 1.6rem;
+    color: #333;
+}
+.newscenter .new_detailB span:nth-of-type(2){
+    position: absolute;
+    left: 1.2rem;
+    top: 5.4rem;
+    font-size: 1.6rem;
+    color: #333;
+}
+.newscenter .new_detailB h3{
+    position: absolute;
+    right: 5.5rem;
+    top: 4.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+.newscenter .new_detailB h3:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.newscenter .new_detailB img{
+    position: absolute;
+    left: 0.9rem;
+    top: 8.6rem;
+}
+.newscenter .new_detailB span:nth-of-type(3){
+    position: absolute;
+    top: 8rem;
+    right: 2rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+.newscenter .new_detailB a{
+    position: absolute;
+    left: 10.3rem;
+    bottom: 3rem;
+    color: #333;
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+.newscenter .new_detailB a:hover{
+    color: #666;
+}
+.bowl{
+    width: 100%;
+    height: 24rem;
+    background: #f6f6f6;
+    position: absolute;
+    top: 224rem;
+    z-index: 3;
+    clear: both;
+}
+.footer{
+    clear: both;
+    position: absolute;
+    width: 100%;
+    height: 26.1rem;
+    top: 248rem;
+    overflow: hidden;
+}
+.footer .content > ul{
+    padding-top: 2.8rem;
+}
+.footer .content > ul > li{
+    display: inline-block;
+    vertical-align: top;
+}
+.footer .content > ul > li:nth-child(2),.footer .content > ul > li:nth-child(3),.footer .content > ul > li:nth-child(4){
+    padding-left: 6rem;
+}
+.footer .content > ul > li > a{
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: bold;
+}
+.footer .son_ul{
+    padding-top: 1.2rem;
+}
+.footer .son_ul li{
+    padding-top: 0.6rem;
+}
+.footer .son_ul li a{
+    font-size: 1.2rem;
+    color: #333;
+}
+.footer .son_ul li a:hover{
+    color: #008ed6;
+}
+.footer .square{
+    position: absolute;
+    top: 2rem;
+    right: 52rem;
+}
+.footer .square .box{
+    position: absolute;
+    width: 10.4rem;
+    background: #e5e5e5;
+    height: 4rem;
+    left: 0.8rem;
+    top: 11.2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+}
+.footer .square .box span{
+    display: block;
+    padding-top: 0.3rem;
+}
+.footer .message{
+    position: absolute;
+    top: 2.2rem;
+    right: 29rem;
+    text-align: right;
+}
+.footer .message > p{
+    margin: 0.4rem 0;
+}
+.footer .message > p:nth-child(1){
+    font-size: 1.6rem;
+    color: #333;
+}
+.footer .message > p:nth-of-type(2){
+    font-size: 2.6rem;
+    color: #6fa8dc;
+    font-weight: bold;
+}
+.footer .message span{
+    font-family: 黑体;
+    font-size: 1.6rem;
+    color: #333;
+}
+.footer .beian{
+    width: 100%;
+    height: 7.2rem;
+    background: #f6f6f6;
+    position: relative;
+    top: 2rem;
+}
+.footer .beian .align{
+    padding-top: 2.2rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+.footer .beian .align > p:nth-child(2){
+    color: #666;
+}
+.footer .beian .align a{
+    color: #666;
+}
+
+.toTop{
+    position: fixed;
+    right: 6rem;
+    bottom: 5rem;
+    width: 4.5rem;
+    height: 2.5rem;
+    text-align: center;
+    background-color: #008ed6;
+    padding-top: 2rem;
+    overflow: hidden;
+    z-index: 10;
+    display: none;
+}
+.toTop:hover{
+    cursor: pointer;
+}
+.toTop-in{
+    visibility: visible;
+    display:inline-block;
+    height:3rem;
+    width: 3rem;
+    background: url("../img/logo/回到顶部.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -1.5rem;
+    margin-top: -1.3rem;
+}

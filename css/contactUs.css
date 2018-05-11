@@ -1,0 +1,419 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "微软雅黑", "宋体";
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+::selection { background:#fff; color: #008ed6; }
+::-moz-selection { background:#fff;color: #008ed6; }
+.header{
+    width: 100%;
+    height: 8.5rem;
+    margin: 0 auto;
+    background: #fff;
+    /*overflow: hidden;*/
+    position: relative;
+}
+.header .hide{
+    width: 1920px;
+    height: 8.5rem;
+    overflow: hidden;
+    /*background-color: red;*/
+}
+nav ul{
+    position: absolute;
+    width: 120rem;
+    left: 8rem;
+    top: 50%;
+    margin-top: -3.2rem;
+}
+nav ul li{
+    position: relative;
+    /*line-height: 1;*/
+    display: inline-block;
+    padding: 2.5rem;
+    font-size: 1.4rem;
+    transition: 0.2s all linear;
+}
+nav ul .active{
+    color: #008ed6;
+}
+nav ul li::before {
+    content: "";
+    position: absolute;
+    top: 0.4rem;
+    left: 100%;
+    width: 0;
+    height: 100%;
+    border-bottom: 2px solid #008ed6;
+    transition: 0.2s all linear;
+}
+nav ul li:hover::before {
+    width: 100%;
+    top: 0.4rem;
+    left: 0;
+    transition-delay: 0.1s;
+    border-bottom-color: #008ed6;
+    z-index: 1;
+}
+nav ul li:hover ~ li::before {
+    left: 0;
+}
+nav ul li a:hover{
+    color: #008ed6;
+}
+nav ul li a{
+    color: #333;
+}
+.logo a{
+    display: block;
+    width: 6.9rem;
+    height: 6.2rem;
+    position: absolute;
+    top: 1.2rem;
+    left: 72.5rem;
+    /*left: 50%;*/
+    /*top: 50%;*/
+    /*margin-left: -3.45rem;*/
+    /*margin-top: -3.1rem;*/
+}
+.logo img{
+    width: 6.9rem;
+    height: 6.2rem;
+    display: inline-block;
+}
+.en{
+    position: relative;
+    left: 136rem;
+    top: 3.4rem;
+    font-size: 1.4rem;
+    overflow: hidden;
+}
+.en a{
+    color: #333;
+}
+.en a:hover{
+    color: #008ed6;
+}
+#banner{
+    width: 100%;
+    height: 30rem;
+    background: url("../img/联系我们/banner.png") no-repeat center center;
+    background-size: cover;
+}
+
+.visible{
+    width: 192rem;
+    overflow: hidden;
+}
+.content{
+    width: 100%;
+    height: auto;
+    margin: 0 300px;
+}
+.contactus{
+    width: 100%;
+    position: relative;
+    margin: 4rem 0;
+}
+.head{
+    text-align: left;
+}
+.head h3{
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: normal;
+}
+.head img{
+    display: block;
+    width: 92rem;
+    height: 0.2rem;
+    padding-top: 1rem;
+}
+.body .leftside{
+    position: relative;
+    width: 30%;
+    float: left;
+    /*background: red;*/
+    margin-top: 3rem;
+}
+.body .leftside h2{
+    font-size: 2rem;
+    color: #333;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+}
+.body .leftside img{
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+}
+.body .leftside img:nth-of-type(1){
+    padding-top: 2rem;
+}
+.body .leftside img:nth-of-type(2){
+    padding-top: 4rem;
+}
+.body .leftside img:nth-of-type(3){
+    padding-top: 4rem;
+}
+.body .leftside span{
+    position: absolute;
+    font-size: 1.8rem;
+    color: #333;
+}
+.body .leftside span:nth-of-type(1){
+    top: 5.2rem;
+    left: 6rem;
+}
+.body .leftside span:nth-of-type(2){
+    top: 13.3rem;
+    left: 6rem;
+}
+.body .leftside span:nth-of-type(3){
+    top: 21.3rem;
+    left: 6rem;
+}
+.body .rightside{
+    position: relative;
+    width: 30%;
+    float: left;
+    /*background: #ff0;*/
+    margin-left: 8rem;
+    margin-top: 3rem;
+}
+.body .rightside img{
+    display: block;
+    width: 15rem;
+    height: 15rem;
+    float: left;
+}
+.body .rightside img:nth-of-type(1){
+    padding-top: 4rem;
+}
+.body .rightside img:nth-of-type(2){
+    padding-top: 4rem;
+    padding-left: 5rem;
+}
+.body .rightside span{
+    position: absolute;
+    font-size: 2rem;
+    color: #333;
+}
+.body .rightside span:nth-of-type(1){
+    left: 3.4rem;
+    top: 20rem;
+}
+.body .rightside span:nth-of-type(2){
+    left: 22.9rem;
+    top: 20rem;
+}
+.body .clear{
+    clear: both;
+}
+.leftMsg{
+    position: absolute;
+    top: 39rem;
+    width: 92.4rem;
+    height: 31rem;
+    background: #f6f6f6;
+    z-index: 2;
+    text-align: center;
+}
+.leftMsg h3{
+    font-size: 2.2rem;
+    color: #333;
+    font-weight: 500;
+    padding-top: 2rem;
+    letter-spacing: 0.2rem;
+}
+.leftMsg input:nth-of-type(1),.leftMsg input:nth-of-type(2) {
+    float: left;
+    border: none;
+    width: 24.5rem;
+    height: 3.5rem;
+    font-size: 1.4rem;
+    background: #fff;
+}
+input::-webkit-input-placeholder{
+    color: rgba(153,153,153,.5);
+}
+input::-moz-placeholder{
+    color: rgba(153,153,153,.5);
+}
+input:-ms-input-placeholder{
+    color: rgba(153,153,153,.5);
+}
+.leftMsg input:nth-of-type(1){
+    position: absolute;
+    left: 20rem;
+    top: 8rem;
+    padding-left: 1rem;
+}
+.leftMsg input:nth-of-type(2){
+    position: absolute;
+    right: 20rem;
+    top: 8rem;
+    padding-left: 1rem;
+}
+.leftMsg textarea{
+    border: none;
+    text-align: center;
+    margin-top: 8rem;
+    margin-left: 0.2rem;
+}
+textarea::-webkit-input-placeholder{
+    text-align: left;
+    color: rgba(153,153,153,.5);
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+textarea:-moz-placeholder{
+    text-align: left;
+    color: rgba(153,153,153,.5);
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+textarea::-moz-placeholder{
+    text-align: left;
+    color: rgba(153,153,153,.5);
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+textarea:-ms-input-placeholder{
+    text-align: left;
+    color: rgba(153,153,153,.5);
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+.leftMsg input:nth-of-type(3){
+    display: block;
+    position: absolute;
+    border: none;
+    width: 10rem;
+    height: 4rem;
+    background: #008ed6;
+    color: #fff;
+    font-size: 1.8rem;
+    top: 25rem;
+    left: 50%;
+    margin-left: -5rem;
+}
+
+#map{
+    width: 100%;
+    height: 36rem;
+    background: url("../img/联系我们/map.png") no-repeat;
+    background-size: cover;
+    margin-top: 22rem;
+}
+
+.footer{
+    clear: both;
+    position: absolute;
+    width: 100%;
+    height: 26.1rem;
+    top: 132.5rem;
+}
+.footer .content > ul{
+    padding-top: 2.8rem;
+}
+.footer .content > ul > li{
+    display: inline-block;
+    vertical-align: top;
+}
+.footer .content > ul > li:nth-child(2),.footer .content > ul > li:nth-child(3),.footer .content > ul > li:nth-child(4){
+    padding-left: 6rem;
+}
+.footer .content > ul > li > a{
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: bold;
+}
+.footer .son_ul{
+    padding-top: 1.2rem;
+}
+.footer .son_ul li{
+    padding-top: 0.6rem;
+}
+.footer .son_ul li a{
+    font-size: 1.2rem;
+    color: #333;
+}
+.footer .son_ul li a:hover{
+    color: #008ed6;
+}
+.footer .square{
+    position: absolute;
+    top: 2.2rem;
+    right: 52rem;
+}
+.footer .square .box{
+    position: absolute;
+    width: 10.4rem;
+    background: #e5e5e5;
+    height: 4rem;
+    left: 0.8rem;
+    top: 11.2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+}
+.footer .square .box span{
+    display: block;
+    padding-top: 0.3rem;
+}
+.footer .message{
+    position: absolute;
+    top: 2.2rem;
+    right: 29rem;
+    text-align: right;
+}
+.footer .message > p{
+    margin: 0.4rem 0;
+}
+.footer .message > p:nth-child(1){
+    font-size: 1.6rem;
+    color: #333;
+}
+.footer .message > p:nth-of-type(2){
+    font-size: 2.6rem;
+    color: #6fa8dc;
+    font-weight: bold;
+}
+.footer .message span{
+    font-family: 黑体;
+    font-size: 1.6rem;
+    color: #333;
+}
+.footer .beian{
+    width: 100%;
+    height: 7.2rem;
+    background: #f6f6f6;
+    position: relative;
+    top: 2rem;
+}
+.footer .beian .align{
+    padding-top: 2.2rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+.footer .beian .align > p:nth-child(2){
+    color: #666;
+}
+.footer .beian .align a{
+    color: #666;
+}
